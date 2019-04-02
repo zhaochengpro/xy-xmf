@@ -1,0 +1,112 @@
+<!--pages/editAddress/editAddress.wxml-->
+<!-----点击添加地址时-------->
+<!-- <view class="blank">联系人</view>
+<view class="linkman">
+  <van-cell-group>
+    <van-field
+      value="{{ username }}"
+      clearable
+      label="姓名"
+      placeholder="请输入收货人姓名"
+      bind:click-icon="onClickIcon"
+    />
+    <van-cell>
+      <view slot="title">
+        <view class="van-cell-text">性别</view>
+        <radio-group class="radio-group" radiochange="radiochange">
+          <label class="radio">
+            <radio value="gender" checked="true" color="#FFA500"/>
+            男       
+          </label>
+          <label class="radio">
+            <radio value="gender" checked="" color="#FFA500"/>
+            女
+          </label>
+        </radio-group>
+      </view>
+    </van-cell>
+    <van-field
+      value="{{ number }}"
+      type="number"
+      label="手机"
+      placeholder="请输入收货人手机号"
+      border="{{ false }}"
+    />
+  </van-cell-group>
+</view>
+
+<view class="blank">地址</view>
+<view class="address">
+  <van-cell-group>
+    <van-field
+        value="成都航空职业技术学院"
+        label="学校"
+        border="{{ false }}"
+    />
+    <van-field
+      value="{{ number }}"
+      label="收货地点"
+      placeholder="如：寝室七栋302/尚学楼404"
+      border="{{ false }}"
+    />
+  </van-cell-group>
+</view> 
+<view class="btn-address">
+  <button class="btn-confirm" >确定</button>
+</view> -->
+<!-----点击某一已有地址------>
+<view class="blank">联系人</view>
+<view class="linkman">
+  <van-cell-group>
+    <van-field
+      value="{{ username }}"
+      clearable
+      label="姓名"
+      placeholder="请输入收货人姓名"
+      bind:click-icon="onClickIcon"
+    />
+    <van-cell>
+      <view slot="title">
+        <view class="van-cell-text">性别</view>
+        <radio-group class="radio-group" radiochange="radiochange">
+          <label class="radio">
+            <radio value="gender" checked="true" color="#FFA500"/>
+            男       
+          </label>
+          <label class="radio">
+            <radio value="gender" checked="" color="#FFA500"/>
+            女
+          </label>
+        </radio-group>
+      </view>
+    </van-cell>
+    <van-field
+      value="{{ number }}"
+      type="number"
+      label="手机"
+      placeholder="请输入收货人手机号"
+      border="{{ false }}"
+    />
+  </van-cell-group>
+</view>
+
+<view class="blank">地址</view>
+<view class="address">
+  <van-cell-group>
+    <van-field
+        value="成都航空职业技术学院"
+        label="学校"
+        border="{{ false }}"
+    />
+    <van-field
+      value="{{ number }}"
+      label="收货地点"
+      placeholder="如：寝室七栋302/尚学楼404"
+      border="{{ false }}"
+    />
+  </van-cell-group>
+</view> 
+<view class="btn-address">
+  <button class="btn-confirm" >确定</button>
+</view>
+<text  bindtap="tap" class="delAddress">删除本条地址</text>

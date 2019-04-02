@@ -1,0 +1,26 @@
+<view class="tabTop">
+  <view bindtap="onClickSendOrder" class="{{isActive[0]?'active':'tabTop-item'}}">我发起的</view>
+  <view bindtap='onClickGetOrder' class="{{isActive[1]?'active':'tabTop-item'}}">我接到的</view>
+</view>
+<!---无订单样式--->
+<!-- <view class="orderArea-no">
+  暂无订单
+</view> -->
+<!---有订单样式- -->
+<view class="orderArea">
+  <view class="orderArea-item">
+    <view class="item-top">
+      <image src="../../images/header/1.jpg"></image>
+      <text>待接单</text>
+    </view>
+    <view class="item-middle">
+        <text></text>
+        <text></text>
+        <text></text>
+    </view>
+    <view class="item-bottom">
+      <button>删除订单</button>
+      <button>编辑订单</button>
+    </view>
+  </view>
+</view>

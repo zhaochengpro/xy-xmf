@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-field": "../../vant/field/index",
+    "van-cell": "../../vant/cell/index",
+    "van-cell-group": "../../vant/cell-group/index"
+  },
+  "navigationBarTitleText": "提现"
+}

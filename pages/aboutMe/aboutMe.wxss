@@ -1,0 +1,9 @@
+/* pages/aboutMe/aboutMe.wxss */
+page{
+  background: rgb(243, 241, 241);
+}
+.aboutMe-header{
+  width:100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}

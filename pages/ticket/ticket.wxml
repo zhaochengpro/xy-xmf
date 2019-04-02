@@ -1,0 +1,14 @@
+<view class="stamp stamp01">
+  <view class="par">
+    <view class="par-title">蜜币抵金券</view>
+    <view class="sign">￥</view>
+    <text class="par-price">5.00</text>
+    <view class="par-name">抵金券</view>
+    <view class="par-max">订单满5.00元</view>
+  </view>
+  <view class="copy">
+  副券
+    <view style="margin-top:20rpx;">2019-04-30</view>
+    <button class="btn-ticket">使用</button>
+  </view>
+</view>

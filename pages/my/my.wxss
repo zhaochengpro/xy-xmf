@@ -1,0 +1,103 @@
+/* pages/my/my.wxss */
+page{
+  background: rgb(243, 241, 241);
+}
+.card{
+  position: relative;
+  /* background: blue; */
+  text-align: center;
+}
+.card-background{
+  position: relative;
+  width:100%;
+  height:300rpx;
+  background: #FFA500;
+}
+.user-header{
+  position: absolute;
+  top:-100rpx;
+  left:50%;
+  margin-left: -100rpx;
+  width:200rpx;
+  height:200rpx;
+  background: white;
+  box-shadow: 0rpx 10rpx 10rpx rgba(217,217,217,1);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user-header image{
+  width:100%;
+  height:100%;
+}
+.user-name{
+  width: 100%;
+  position: absolute;
+  display: inline-block;
+  top:120rpx;
+  font-size: 36rpx;
+  font-family: "黑体";
+  /* background: red; */
+  text-align: center;
+}
+.card-foreground{
+  position: relative;
+  top:100rpx;
+  left:5%;
+  width:90%;
+  height:400rpx;
+  margin-top:-300rpx;
+  background: white;
+  z-index: 100;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 5rpx 20rpx rgba(217,217,217,1);
+}
+/**user-money   css***/
+.user-money{
+  position: relative;
+  top:50%;
+  left:0rpx;
+  width: 100%;
+  height:50%;
+  /* background: blue; */
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  /* border-top: 2px dotted rgba(217,217,217,1); */
+}
+.user-money-item{
+  display: inline-block;
+  margin-left: 15rpx;
+  width:30%;
+  height:90%;
+  border-radius: 50%;
+  text-align: center;
+}
+.user-money-item:nth-of-type(3){
+  border: 0rpx;
+}
+.user-money-number{
+  margin-top: 60rpx;
+  font-size: 40rpx;
+  font-weight: 900;
+  font-family: "黑体";
+  /* color:white; */
+}
+.user-money-desc{
+  font-weight: 100;
+  font-size: 30rpx;
+  color:rgb(148, 144, 144);
+  margin-top: 10rpx;
+}
+/**我的信息tab页拓展功能区域 css***/
+.extendFunction{
+  position: relative;
+  top:150rpx;
+  left:5%;
+  width: 90%;
+  height: 420rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(217,217,217,1);
+  overflow: hidden;
+}
+van-cell-group,van-cell{
+  border:0rpx;
+}

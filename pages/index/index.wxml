@@ -1,0 +1,116 @@
+<view class="background">
+  <image src="../../images/icons/bee-active.png" class=".index-icon"></image>
+  <view class="lineH">勤劳的小蜜们能为你做点什么？</view>
+  <view class="menu">
+    <view class="menu-item" bindtap='onClickMenu' id="delivery">
+      <view class="title">快递</view>
+      <view class="desc">寄件取件</view>
+    </view>
+    <view class="menu-item" bindtap='onClickMenu' id="fetch">
+      <view class="title">取物</view>
+      <view class="desc">取衣代取</view>
+    </view>
+    <view class="menu-item" bindtap='onClickMenu' id="food">
+      <view class="title">美食</view>
+      <view class="desc">周边美食</view>
+    </view>
+    <view class="menu-item" bindtap='onClickMenu' id="market">
+      <view class="title">超市</view>
+      <view class="desc">薯片香烟</view>
+    </view>
+    <view class="menu-item" bindtap='onClickLeaveUnused' id="leaveUnused">
+      <view class="title">闲置</view>
+      <view class="desc">二手买卖</view>
+    </view>
+    <view class="menu-item" bindtap='onClickMenu' id="drink">
+      <view class="title">饮品</view>
+      <view class="desc">奶茶咖啡</view>
+    </view>
+    <view class="menu-item" bindtap='onClickMenu' id="server">
+      <view class="title">信息服务</view>
+      <view class="desc">PPT、软件</view>
+    </view>
+    <view class="menu-item" bindtap='onClickMenu' id="other">
+      <view class="title">采蜜</view>
+      <view class="desc">由你吩咐</view>
+    </view>
+  </view>
+</view>
+<view class="allOrderList">
+  <view class="list-item" bindtap='onClickRobTicket'>
+    <image class="gender-icon" src="../../images/icons/male.png"></image>
+    <view class="contentArea">
+      <view class="order-title">【肖姐木桶饭】米饭x1、鸡翅x1、土豆x1、白菜x1</view>
+      <view class="order-desc">
+        <view class="order-name">外卖小蜜</view>
+        <view class="order-date">今天18:07</view>
+        <view class="order-place">11栋317，即时出发</view>
+      </view>
+    </view>
+    <view class="getOrder">
+      <view class="order-price"><text class="title">蜜币：</text><text class="price">￥2</text></view>
+      <button class="btn-order" catchtap='onClickRobTicket'>抢单</button>
+    </view>
+  </view>
+  <view class="list-item" bindtap='onClickRobTicket'>
+    <image class="gender-icon" src="../../images/icons/male.png"></image>
+    <view class="contentArea">
+      <view class="order-title">【肖姐木桶饭】米饭x1、鸡翅x1、土豆x1、白菜x1</view>
+      <view class="order-desc">
+        <view class="order-name">外卖小蜜</view>
+        <view class="order-date">今天18:07</view>
+        <view class="order-place">11栋317，即时出发</view>
+      </view>
+    </view>
+    <view class="getOrder">
+      <view class="order-price"><text class="title">蜜币：</text><text class="price">￥2</text></view>
+      <button class="btn-order" catchtap='onClickRobTicket'>抢单</button>
+    </view>
+  </view>
+  <view class="list-item" bindtap='onClickRobTicket'>
+    <image class="gender-icon" src="../../images/icons/male.png"></image>
+    <view class="contentArea">
+      <view class="order-title">【肖姐木桶饭】米饭x1、鸡翅x1、土豆x1、白菜x1</view>
+      <view class="order-desc">
+        <view class="order-name">外卖小蜜</view>
+        <view class="order-date">今天18:07</view>
+        <view class="order-place">11栋317，即时出发</view>
+      </view>
+    </view>
+    <view class="getOrder">
+      <view class="order-price"><text class="title">蜜币：</text><text class="price">￥2</text></view>
+      <button class="btn-order" catchtap='onClickRobTicket'>抢单</button>
+    </view>
+  </view>
+  <view class="list-item" bindtap='onClickRobTicket'>
+    <image class="gender-icon" src="../../images/icons/male.png"></image>
+    <view class="contentArea">
+      <view class="order-title">【肖姐木桶饭】米饭x1、鸡翅x1、土豆x1、白菜x1</view>
+      <view class="order-desc">
+        <view class="order-name">外卖小蜜</view>
+        <view class="order-date">今天18:07</view>
+        <view class="order-place">11栋317，即时出发</view>
+      </view>
+    </view>
+    <view class="getOrder">
+      <view class="order-price"><text class="title">蜜币：</text><text class="price">￥2</text></view>
+      <button class="btn-order" catchtap='onClickRobTicket'>抢单</button>
+    </view>
+  </view>
+  <view class="list-item" bindtap='onClickRobTicket'>
+    <image class="gender-icon" src="../../images/icons/male.png"></image>
+    <view class="contentArea">
+      <view class="order-title">【肖姐木桶饭】米饭x1、鸡翅x1、土豆x1、白菜x1</view>
+      <view class="order-desc">
+        <view class="order-name">外卖小蜜</view>
+        <view class="order-date">今天18:07</view>
+        <view class="order-place">11栋317，即时出发</view>
+      </view>
+    </view>
+    <view class="getOrder">
+      <view class="order-price"><text class="title">蜜币：</text><text class="price">￥2</text></view>
+      <button class="btn-order" catchtap='onClickRobTicket'>抢单</button>
+    </view>
+  </view>
+</view>
+

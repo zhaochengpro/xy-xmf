@@ -1,0 +1,5 @@
+/**app.wxss**/
+@import "./vant/common/index.wxss";
+page{
+  background: #F6F6F6;
+}

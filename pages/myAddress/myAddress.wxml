@@ -1,0 +1,47 @@
+<!----第一次添加时，没有默认地址----->
+<!-- <view class="addAddress">
+  <view class="addIcon">
+    <view class="line-h"></view>
+    <view class="line-v"></view>
+  </view>
+  <view class="addIcon-title">新增地址</view>
+</view> -->
+<!----添加后，有默认地址----->
+<van-cell-group title="分组1" bindtop="onClick">
+  <view class="blank"></view>
+  <van-cell
+    is-link
+    size="large"
+    url="../editAddress/editAddress"
+    clickable="true"
+    bind:click="onClick"
+  >
+    <view slot="title">
+    <view class="van-cell-text">A区宿舍10号楼605</view>
+    <view class="van-cell-babel"><text >赵丞</text><text>15228164497</text></view>
+  </view>
+  </van-cell>
+</van-cell-group>
+<van-cell-group title="分组1">
+  <view class="blank"></view>
+  <van-cell
+    is-link
+    size="large"
+    url="../editAddress/editAddress"
+  >
+    <view slot="title">
+    <view class="van-cell-text">A区宿舍10号楼605</view>
+    <view class="van-cell-babel"><text >赵丞</text><text>15228164497</text></view>
+  </view>
+  </van-cell>
+</van-cell-group>
+<van-cell-group title="分组2">
+      <view class="blank"></view>
+  <van-cell
+    title="新增地址"
+    is-link
+    size="large"
+    icon="add-o"
+    url="../editAddress/editAddress"
+  />
+</van-cell-group>

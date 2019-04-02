@@ -1,0 +1,49 @@
+<view classs="card">
+  <view class="card-background"></view>
+  <view class="card-foreground">
+    <view class="user-header" bindtap='showAboutMe'><image src="../../images/header/1.jpg"></image></view>
+    <view class="user-name">小蜜蜂</view>
+    <view class="user-money">
+      <view class="user-money-item balance" bindtap='showBalance'>
+        <view class="user-money-number">0元</view>
+        <view class="user-money-desc">余额</view>
+      </view>
+      <view class="user-money-item redPicket"  bindtap='showRedPacket'>
+        <view class="user-money-number">0个</view>
+        <view class="user-money-desc">红包</view>
+      </view>
+      <view class="user-money-item gold"  bindtap='showGoldCoin'>
+        <view class="user-money-number">0张</view>
+        <view class="user-money-desc">抵金券</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="extendFunction">
+  <van-cell-group title="分组1" >
+    <van-cell
+      title="我的地址"
+      is-link
+      url="../myAddress/myAddress"
+      size="large"
+      label="新增地址"
+      border="{{false}}"
+    />
+    <van-cell
+      title="我的消息"
+      is-link
+      url="../myMessage/myMessage"
+      size="large"
+      label="消息查看"
+    />
+  </van-cell-group>
+  <van-cell-group title="分组2" border="{{false}}">
+    <van-cell
+      title="联系客服"
+      label="问题解疑"
+      is-link
+      border="{{false}}"
+      bindtap="callHelp"
+    />
+  </van-cell-group>
+</view>

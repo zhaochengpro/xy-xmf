@@ -1,0 +1,18 @@
+<!--pages/detailOrder/detailOrder.wxml-->
+<view class="background"></view>
+<view class="order-card">
+  <view class="user-header">
+    <image src="../../images/header/1.jpg"></image>
+  </view>
+  <view class="box-orderDetail">
+    <view class="orderContent">圆通快递二号门妈妈驿站 取货码：78*****20 赵丞 13******06</view>
+    <view class="price"><text>蜜币：￥</text><text>5</text></view>
+    <view class="weight"><text>重量：</text><text>小件</text></view>
+  </view>
+  <view class="otherInfo">
+    <view class="gender"><view class="arrow"></view><text>性别限制：</text><text>男</text></view>
+    <view class="from"><text>前往：</text><text>商业街</text></view>
+    <view class="to"><text>到达：</text><text>寝室10栋605</text></view>
+  </view>
+  <view class="getOrderBtn"> <button>抢单</button></view>
+</view>

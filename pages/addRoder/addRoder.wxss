@@ -1,0 +1,114 @@
+.order-detail{
+  width: 100%;
+  height:300rpx;
+  background: white;
+  box-sizing: border-box;
+}
+.order-detail textarea{
+  margin:0 auto;
+  width:90%;
+  height:80%;
+  padding-top: 30rpx;
+}
+.location{
+  color: green;
+}
+.location1{
+  color:#FFA500;
+}
+/***选择蜜币弹框颜样式*****/
+.prices{
+  width:100%;
+  height:600rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.prices view{
+  display: inline-block;
+  width:30%;
+  height:20%;
+  margin-left: 10rpx;
+}
+.prices view button,.prices input{
+  background: transparent;
+  border-radius: 20rpx;
+  border:1rpx solid rgb(197, 196, 196);
+  color:darkgray;
+  transition: all 0.2s linear;
+}
+.prices label{
+  display: block;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  text-align: center;
+}
+.prices input{
+  width:90%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+}
+.prices .active{
+  /* background: red; */
+  border:1rpx solid rgb(255, 166, 0);
+  color:#FFA500;
+}
+.custom-button{
+  /* width:80rpx; */
+  height:50rpx;
+  background: #FFA500;
+  color:white;
+  font-size: 25rpx;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+}
+/***二手物品图片样式***/
+.marchantImage{
+  width:100%;
+  height:800rpx;
+  background: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+.takePic{
+  position: relative;
+  width: 45%;
+  height:45%;
+  margin-left: 15rpx;
+  margin-top: 15rpx;
+  display: inline-block;
+  background: rgb(209, 208, 208);
+  box-sizing: border-box;
+}
+.addIcon{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-left: -50rpx;
+  margin-top: -50rpx;
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  background: white;
+}
+.addTitle{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-top: 70rpx;
+  margin-left: -60rpx;
+  color:white;
+  font-size: 30rpx;
+}
+.line-h,.line-v{
+  position: relative;
+  top:50%;
+  left:50%;
+  margin-left: -30rpx;
+  margin-top: -1rpx;
+  width:60rpx;
+  border: 2rpx solid rgb(209, 208, 208);
+}
+.line-v{
+  transform: rotate(90deg)
+}

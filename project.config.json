@@ -1,0 +1,142 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wx5314097ee030810d",
+	"projectname": "XY_XMF",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 13,
+			"list": [
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/myAddress/myAddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "editAddress",
+					"pathName": "pages/editAddress/editAddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "myMessage",
+					"pathName": "pages/myMessage/myMessage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "aboutMe",
+					"pathName": "pages/aboutMe/aboutMe",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "stuApprove",
+					"pathName": "pages/stuApprove/stuApprove",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "balance",
+					"pathName": "pages/balance/balance",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "withDraw",
+					"pathName": "pages/withDraw/withDraw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ticket",
+					"pathName": "pages/ticket/ticket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "addRoder",
+					"pathName": "pages/addRoder/addRoder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "leaveUnused",
+					"pathName": "pages/leaveUnused/leaveUnused",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "detailOrder",
+					"pathName": "pages/detailOrder/detailOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<!--pages/aboutMe/aboutMe.wxml-->
+<view class="blank"></view>
+<view class="basicsInfo">
+  <van-cell-group title="分组1">
+    <van-cell title="头像">
+      <image class="aboutMe-header" src="../../images/header/1.jpg"></image>
+    </van-cell>
+    <van-cell title="昵称" value="DC"></van-cell>
+    <van-cell title="性别" value="男"></van-cell>
+    <van-cell title="邮箱" value="未绑定"></van-cell>
+    <van-cell title="手机号" value="未绑定" is-link open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></van-cell>
+  </van-cell-group>
+</view>
+<view class="blank"></view>
+<view class="studentApprove">
+  <van-cell-group title="分组2">
+    <van-cell title="学生认证" value="未认证" is-link url="../stuApprove/stuApprove"></van-cell>
+  </van-cell-group>
+</view>
+

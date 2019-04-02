@@ -1,0 +1,89 @@
+<view class="order-detail">
+  <textarea placeholder='二手商品描述。示例：卖二手xxx手机，9成新，无暗病，可正常使用。' placeholder-style="color:rgb(158, 158, 158);z-index:2" style="z-index:2"
+  adjust-position="true"
+  wx:if="{{isShow}}"
+  >
+  </textarea>
+</view>
+<view class="blank"></view>
+<view class="marchantImage">
+  <view class="takePic">
+    <view class="addIcon"><view class="line-h"></view><view class="line-v"></view></view>
+    <view class="addTitle">物品照片</view>
+  </view>
+  <view class="takePic">
+    <view class="addIcon"><view class="line-h"></view><view class="line-v"></view></view>
+    <view class="addTitle">物品照片</view>
+  </view>
+  <view class="takePic">
+    <view class="addIcon"><view class="line-h"></view><view class="line-v"></view></view>
+    <view class="addTitle">物品照片</view>
+  </view>
+  <view class="takePic">
+    <view class="addIcon"><view class="line-h"></view><view class="line-v"></view></view>
+    <view class="addTitle">物品照片</view>
+  </view>
+</view>
+<view class="blank"></view>
+<van-cell-group>
+  <van-field
+    label="物品价格"
+    value="{{ username }}"
+    placeholder="二手物品价格"
+    readonly
+    is-link
+    bindtap="choosePrice"
+  />
+  <van-action-sheet show="{{ priceShow }}" title="物品价格" bind:close="onClose">
+    <view class="prices">
+      <label>
+        <input type="digit" value="{{price}}" placeholder="输入物品价格" bindtap="onChoosePrice" id="6" class="{{priceActiveArr[6]=='true'?'active':'none'}}" bindinput="onInput" adjust-position="true" confirm-type="确定">
+        </input>
+      </label>
+      <button>确定</button>
+    </view>
+  </van-action-sheet>
+  <van-field
+    label="入手价"
+    value=""
+    placeholder="该物品购买时价格"
+    readonly
+    is-link
+    bindtap="chooseNewPrice"
+  />
+   <van-action-sheet show="{{ newPriceShow }}" title="入手价" bind:close="onClose">
+    <view class="prices">
+      <label>
+        <input type="digit" value="{{price}}" placeholder="该物品收入时价格" bindtap="onChoosePrice" id="6" class="{{priceActiveArr[6]=='true'?'active':'none'}}" bindinput="onInput" adjust-position="true" confirm-type="确定">
+        </input>
+       
+      </label>
+       <button>确定</button>
+    </view>
+  </van-action-sheet>
+  <van-field
+    label="入手时间"
+    value="{{ marchantDate }}"
+    placeholder="该物品购买时间"
+    readonly
+    is-link
+    bindtap="chooseDate"
+  />
+  <van-action-sheet show="{{ marchantDateShow }}" title="入手日期" bind:close="onClose">
+    <van-datetime-picker
+    type="year-month"
+    value="{{ currentDate }}"
+    max-date="{{ maxDate }}"
+    bind:input="onDateInput"
+    bind:cancel="onClose"
+    bind:confirm="onConfirm"
+    />
+  </van-action-sheet>
+</van-cell-group>
+<view class="blank"></view>
+<view style="width:100%;height:300rpx;color:darkgray;font-size:30rpx;padding:20rpx;text-align:center;box-sizing:border-box;">
+  <text style="color:red;font-size:30rpx;">*</text>该平台上发布的所有二手物品都不得收取任何费用，由用户线下自行进行现金交易，
+</view>
+<view class="btn-issue">
+  <button>确定发布</button>
+</view>

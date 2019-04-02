@@ -1,0 +1,197 @@
+<view class="order-detail">
+  <textarea placeholder='{{textPlaceHoder}}' placeholder-style="color:rgb(158, 158, 158);z-index:2" style="z-index:2"
+  adjust-position="true"
+  wx:if="{{isShow}}"
+  >
+  </textarea>
+</view>
+<view class="blank"></view>
+<van-cell-group>
+  <van-field
+    label="接头地"
+    value="{{ username }}"
+    icon="location"
+    icon-class="location"
+    placeholder="去哪取"
+    is-link
+    id="o1"
+    style="display:{{inputDisabledArr[0]?'block':'none'}};"
+  />
+  <van-field
+    label="目的地"
+    icon="location"
+    icon-class="location1"
+    value="{{ phone }}"
+    placeholder="送到哪"
+    border="{{ false }}"
+    is-link
+    id="o2"
+    style="display:{{inputDisabledArr[1]?'block':'none'}};"
+  />
+  <van-field
+    label="行动时间"
+    value="{{ phone }}"
+    border="{{ false }}"
+    placeholder="什么时候开始"
+    is-link
+    readonly
+    bindtap="onClickWhen"
+    id="o3"
+    style="display:{{inputDisabledArr[2]?'block':'none'}};"
+  />
+  <van-action-sheet show="{{ whenShow }}" title="行动时间" bind:close="onClose"cancel-text="确定" bind:cancel="onClickConfirm">
+    <view><van-picker columns="{{ columns }}" bind:change="onTimeChange" /></view>
+  </van-action-sheet>
+  
+</van-cell-group>
+<view class="blank"></view>
+<van-cell-group>
+  <van-field
+    label="蜜币"
+    value="{{ username }}"
+    placeholder="给小蜜的奖赏"
+    readonly
+    is-link
+    bindtap="choosePrice"
+    id="o4"
+    style="display:{{inputDisabledArr[3]?'block':'none'}};"
+  />
+  <van-action-sheet show="{{ priceShow }}" title="选择或输入蜜币" bind:close="onClose">
+    <view class="prices">
+      <view><button bindtap="onChoosePrice" id="0" class="{{priceActiveArr[0]=='true'?'active':'none'}}">￥1元</button></view>
+      <view><button bindtap="onChoosePrice" id="1" class="{{priceActiveArr[1]=='true'?'active':'none'}}">￥2元</button></view>
+      <view><button bindtap="onChoosePrice" id="2" class="{{priceActiveArr[2]=='true'?'active':'none'}}">￥3元</button></view>
+      <view><button bindtap="onChoosePrice" id="3" class="{{priceActiveArr[3]=='true'?'active':'none'}}">￥4元</button></view>
+      <view><button bindtap="onChoosePrice" id="4" class="{{priceActiveArr[4]=='true'?'active':'none'}}">￥5元</button></view>
+      <view><button bindtap="onChoosePrice" id="5" class="{{priceActiveArr[5]=='true'?'active':'none'}}">￥6元</button></view>
+      <label>
+        自定义蜜币
+        <input type="digit" value="{{price}}" placeholder="输入蜜币" bindtap="onChoosePrice" id="6" class="{{priceActiveArr[6]=='true'?'active':'none'}}" bindinput="onInput" adjust-position="true" confirm-type="确定">
+        </input>
+        <button style="width:80%;color:30rpx;margin-top:30rpx;background:#FFA500;color:white;">确定</button>
+      </label>
+    </view>
+  </van-action-sheet>
+
+  <van-field
+    label="抵金券"
+    value="{{ phone }}"
+    placeholder="请选择你的抵金券"
+    border="{{ false }}"
+    is-link
+    readonly
+    id="o5"
+    style="display:{{inputDisabledArr[4]?'block':'none'}};"
+  />
+  <van-field
+    value="{{ phone }}"
+    placeholder="实物大概应付金额"
+    border="{{ false }}"
+    is-link
+    readonly
+    bindtap="onClickRealyPrice"
+    id="o6"
+    style="display:{{inputDisabledArr[5]?'block':'none'}};"
+  />
+</van-cell-group>
+<van-dialog
+  title="此金额不会计入待支付金额中"
+  use-slot
+  async-close
+  show="{{ show }}"
+  show-cancel-button
+  confirm-button-open-type="getUserInfo"
+  bind:close="onClose"
+  bind:getuserinfo="getUserInfo"
+  z-index='100000'
+  id="o7"
+  
+>
+<van-field
+  value="{{ password }}"
+  type="digit"
+  label="实物金额"
+  placeholder="请输入实物金额"
+  :border="true"
+  id="o8"
+  style="display:{{inputDisabledArr[6]?'block':'none'}};"
+/>
+</van-dialog>
+<view class="blank"></view>
+<van-cell-group>
+  <van-field
+    label="负重"
+    value="{{ username }}"
+    placeholder="物品重量"
+    readonly
+    is-link
+    bindtap="showWeight"
+    id="o9"
+    style="display:{{inputDisabledArr[7]?'block':'none'}};"
+  />
+  <van-action-sheet show="{{ weightShow }}" title="请选择物品重量" bind:close="onClose">
+    <view class="prices" style="margin-top:100rpx;height:400rpx;">
+      <view><button bindtap="onChoosePrice" id="0" class="{{priceActiveArr[0]=='true'?'active':'none'}}">轻件</button></view>
+      <view><button bindtap="onChoosePrice" id="1" class="{{priceActiveArr[1]=='true'?'active':'none'}}">小件</button></view>
+      <view><button bindtap="onChoosePrice" id="2" class="{{priceActiveArr[2]=='true'?'active':'none'}}">中件</button></view>
+      <view><button bindtap="onChoosePrice" id="3" class="{{priceActiveArr[3]=='true'?'active':'none'}}">大件</button></view>
+      <view><button bindtap="onChoosePrice" id="4" class="{{priceActiveArr[4]=='true'?'active':'none'}}">超大件</button></view>
+    </view>
+  </van-action-sheet>
+  <van-field
+    label="小蜜性别"
+    value="{{ phone }}"
+    placeholder="选择抢单性别限制"
+    border="{{ false }}"
+    is-link
+    readonly
+    id="o10"
+    bindtap="chooseGender"
+    style="display:{{inputDisabledArr[8]?'block':'none'}};"
+  />
+    <van-action-sheet show="{{ genderShow }}" title="选择性别限制" bind:close="onClose">
+    <view class="prices" style="margin-top:100rpx;height:400rpx;">
+      <view><button bindtap="onChoosePrice" id="0" class="{{priceActiveArr[0]=='true'?'active':'none'}}">男生</button></view>
+      <view><button bindtap="onChoosePrice" id="1" class="{{priceActiveArr[1]=='true'?'active':'none'}}">女生</button></view>
+      <view><button bindtap="onChoosePrice" id="2" class="{{priceActiveArr[2]=='true'?'active':'none'}}">不限性别</button></view>
+    </view>
+  </van-action-sheet>
+  <van-field
+    label="订单过期"
+    value="{{ phone }}"
+    placeholder="选择订单过期时间"
+    border="{{ false }}"
+    is-link
+    readonly
+    id="o11"
+    bindtap="showDeadLine"
+    style="display:{{inputDisabledArr[9]?'block':'none'}};"
+  />
+</van-cell-group>
+<van-action-sheet show="{{ deadline }}" title="选择订单过期时间" bind:close="onClose" bind:cancel="">
+  <view style="margin-bottom:30%;margin-top:50rpx;">
+    <van-slider
+      value="{{ currentValue }}"
+      use-button-slot
+      bind:drag="onDrag"
+      max="100"
+      min="1"
+      safe-area-inset-bottom="true"
+    >
+      <view class="custom-button" slot="button">
+        {{ displayValue }}小时
+      </view>
+      
+    </van-slider>
+    <button style="width:80%;color:30rpx;margin-top:70rpx;background:#FFA500;color:white;">确定</button>
+  </view>
+
+</van-action-sheet>
+<view style="width:100%;height:300rpx;"></view>
+<van-submit-bar
+  price="{{ 500 }}"
+  button-text="确定发布"
+  bind:submit="onSubmit"
+  label="待付款："
+  safe-area-inset-bottom="true"
+/>

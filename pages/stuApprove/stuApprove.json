@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-steps": "../../vant/steps/index",
+    "van-cell": "../..//vant/cell/index",
+    "van-cell-group": "../../vant/cell-group/index",
+    "van-field": "../../vant/field/index",
+    "van-icon": "../../vant/icon/index",
+    "van-datetime-picker": "../../vant/datetime-picker/index",
+    "van-popup": "../../vant/popup/index"
+  },
+  "navigationBarTitleText": "学生认证"
+}

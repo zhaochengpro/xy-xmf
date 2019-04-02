@@ -1,0 +1,123 @@
+<!--pages/stuApprove/stuApprove.wxml-->
+<view class="steps">
+  <van-steps
+  steps="{{ steps }}"
+  active="{{ active }}"
+  active-color="#FFA500"
+  custom-class="steps-process"
+  />
+</view>
+<view class="blank"></view>
+<view style="display:{{rotutePage[0]}}">
+  <view class="steps-info">
+        <van-cell-group>
+            <van-field
+              value="{{ username }}"
+              clearable
+              label="姓名"
+              placeholder="请输入你的真实姓名"
+              bind:click-icon="onClickIcon"
+            />
+            <van-cell>
+              <view slot="title">
+                <view class="van-cell-text">性别</view>
+                <radio-group class="radio-group" radiochange="radiochange">
+                  <label class="radio">
+                    <radio value="gender" checked="true" color="#FFA500"/>
+                    男 
+                  </label>
+                  <label class="radio">
+                    <radio value="gender" checked="" color="#FFA500"/>
+                    女
+                  </label>
+              </radio-group>
+              </view>
+            </van-cell>
+            <van-field
+              value="{{ number }}"
+              type="number"
+              label="身份证号"
+              placeholder="请输入你的身份证号码"
+              border="{{ false }}"
+            />
+          </van-cell-group>
+      </view>
+      <view class="blank"></view>
+      <view class="picture">
+      <view class="pic-demo"><image src="../../images/pic/picDemo.jpg"></image></view>
+       <view class="takePic">
+         <view class="addIcon"><view class="line-h"></view><view class="line-v"></view></view>
+          <view class="addTitle">点击拍照</view>
+        </view>
+      </view></view>
+<view style="display:{{rotutePage[1]}}">
+  <view class="steps-info">
+        <van-cell-group>
+          <van-field
+            clearable
+            label="学号"
+            placeholder="请输入"
+          />
+          <van-field
+            value="成都航空职业技术学院"
+            label="学校"
+            placeholder=""
+            is-link
+            disabled
+          />
+           <van-field
+            clearable
+            label="院系"
+            placeholder="请输入"
+            bind:click-icon="onClickIcon"
+          />
+           <van-field
+            clearable
+            label="专业"
+            placeholder="请输入"
+          />
+           <view class="section">
+        <picker
+          mode="date"
+          value="{{ nowDate }}"
+          start="2002-09-01"
+          end="{{ maxDate }}"
+          bindchange="bindDateChange"
+        >
+          <van-field
+            clearable
+            label="入学年月"
+            placeholder="{{intendTime}}"
+            is-link
+            disabled
+          />
+        </picker>
+      </view>
+        </van-cell-group>
+      </view>
+         
+      <view class="blank"></view>
+      <view class="picture">
+      <view class="pic-demo"><image src="../../images/pic/stu.jpg"></image></view>
+       <view class="takePic">
+         <view class="addIcon"><view class="line-h"></view><view class="line-v"></view></view>
+          <view class="addTitle">点击拍照</view>
+        </view>
+        </view>
+</view>
+<view style="display:{{rotutePage[2]}};text-align:center;">
+  <view style="background:white;height:60%">
+    <image src="../../images/icons/bindTelephone.png" class="bindTelephone-icon"></image>
+    <button class="bindTelephone">绑定微信手机号</button>
+  </view>
+</view>
+<view style="display:{{rotutePage[3]}}">
+  <view style="background:white;text-align:center;height:60%">
+    <image src="../../images/icons/success.png" class="success-icon"></image>
+    <view style="margin-bottom:50rpx;">验证成功</view>
+  </view>
+</view>
+<view class="next">
+  <button bindtap="onClickPrev" style="width:40%;display:{{prevDisplay?'inline-block':'none'}}">上一步</button>
+  <button bindtap='onClickNext' style="width:{{prevDisplay?'40%':'90%'}};display:{{active==3?'none':'inline-block'}};margin-left:{{prevDisplay?'20rpx':'0rpx'}};">下一步</button>
+</view>

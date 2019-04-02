@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-cell": "../..//vant/cell/index",
+    "van-cell-group": "../../vant/cell-group/index",
+    "van-icon": "../../vant/icon/index",
+    "van-field": "../../vant/field/index",
+    "van-radio": "../../vant/radio/index",
+    "van-radio-group": "../../vant/radio-group/index"
+  },
+  "navigationBarTitleText": "编辑地址"
+}

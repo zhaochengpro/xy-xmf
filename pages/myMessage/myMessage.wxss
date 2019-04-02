@@ -1,0 +1,26 @@
+/* pages/myMessage/myMessage.wxss */
+page{
+  background: rgb(243, 241, 241);
+}
+.unfind{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-left: -100rpx;
+  margin-top: -100rpx;
+  width: 250rpx;
+  height: 250rpx;
+  /* background: blue; */
+  text-align: center;
+}
+.unfind>image{
+  width: 60%;
+  height:60%;
+  /* background: red; */
+}
+.unfind-word{
+  margin-top: 30rpx;
+  display: block;
+  font-size: 25rpx;
+  color:rgb(177, 177, 177);
+}

@@ -1,0 +1,185 @@
+page{
+  background: rgb(243, 241, 241);
+}
+.background{
+  width:100%;
+  height:300rpx;
+  background: white;
+  box-shadow: 0rpx 0rpx 5rpx gray;
+}
+.index-icon{
+  width:50rpx;
+  height:50rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.lineH{
+  display: inline-block;
+  width:60%;
+  border-bottom: 1rpx solid black;
+  z-index: 100;
+  font-size: 25rpx;
+  box-sizing: border-box;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  vertical-align: bottom;
+  animation: lineAnim 1s linear 2s;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@keyframes lineAnim{
+  0%{width:0%}
+  50%{width:30%}
+  100%{width:60%}
+}
+.menu{
+  width:95%;
+  height:370rpx;
+  margin: 20rpx auto;
+  background:#FFA500;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 10rpx gray;
+}
+.menu-item{
+  width:23%;
+  height:150rpx;
+  /* background: rgb(224, 224, 224); */
+  background: rgba(255,255,255,1);
+  display: inline-block;
+  border-radius: 20rpx;
+  margin-left: 12rpx;
+  margin-top:20rpx;
+  text-align: center;  
+}
+.menu-item .title{
+  font-size: 35rpx;
+  font-weight: 900;
+  font-family: "黑体";
+  margin-top: 20%;
+}
+.menu-item .desc{
+  font-size: 25rpx;
+  color:darkgray;
+}
+/**所有订单列表 css***/
+.allOrderList{
+  position: relative;
+  background: white;
+  width:95%;
+  margin:0 auto;
+  border-radius: 20rpx;
+  margin-top: 200rpx;
+  box-shadow: 0rpx 0rpx 10rpx darkgray;
+}
+/**每个订单的样式***/
+.list-item{
+  position: relative;
+  width:90%;
+  height:100rpx;
+  margin:0 auto;
+  border-bottom:1rpx solid rgb(214, 214, 214);
+  padding:20rpx 0rpx;
+}
+/* .genderSign{
+  position: absolute;
+  left:-40rpx;
+  top:-40rpx;
+  width:80rpx;
+  height:80rpx;
+  border-top:1rpx solid rgb(216, 215, 215);
+  transform: rotate(135deg);
+  transform-origin: center center;
+} */
+.gender-icon{
+  position: absolute;
+  width:30rpx;
+  height:30rpx;
+  margin-top: 5rpx;
+  margin-left: 2rpx;
+}
+.contentArea{
+  display: inline-block;
+  width:70%;
+  height:100%;
+  /* background: blue; */
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 7%;
+}
+.getOrder{
+  display: inline-block;
+  width:30%;
+  height:100%;
+  /* background: yellow; */
+}
+.order-title,.order-desc{
+  width:100%;
+  height:50%;
+  /* background: green; */
+}
+.order-title{
+  font-size: 30rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.order-name,.order-date,.order-place{
+  display: inline-block;
+  font-size: 20rpx;
+  color:darkgray;
+}
+.order-name{
+  position: relative;
+  width:25%;
+  height:35rpx;
+  background:darkgray;
+  border-radius: 5rpx;
+  color:white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35rpx;
+}
+.order-date{
+  margin-left: 15rpx;
+  font-size: 18rpx;
+}
+.order-place{
+  font-size: 20rpx;
+  margin-left: 20rpx;
+}
+.getOrder{
+  position: relative;
+  width:30%;
+  height:100%;
+}
+.order-price{
+  display: inline-block;
+  width:100%;
+  height:40%;
+  text-align: center;
+  /* background: red; */
+}
+.order-price>.title{
+  display: inline-block;
+  font-size: 24rpx;
+  color: rgb(117, 117, 117);
+  vertical-align: top;
+}
+.price{
+  display: inline-block;
+  font-size: 30rpx;
+  font-weight: 800;
+  color: red;
+  vertical-align: top;
+}
+.btn-order{
+  width:80%;
+  height:50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color:white;
+  background: #FFA500;
+  border:none;
+}

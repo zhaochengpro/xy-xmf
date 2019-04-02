@@ -1,0 +1,7 @@
+<!--没有消息时的页面----->
+<view class="unfind">
+  <image src="../../images/icons/unfind.png"></image>
+  <text class="unfind-word">您没有收到任何消息</text>
+</view>
+
+<!---当有信息时----->

@@ -1,0 +1,50 @@
+<!--pages/balance/balance.wxml-->
+<view class="balance">
+  <view class="balance-box">
+    <view class="balance-title">我的余额</view>
+    <view class="balance-number">{{ myBalance }}</view>
+  </view>
+  <button class="withDraw" bindtap='onClickWithDraw'>提现&gt;</button>
+</view>
+<view class="aboutBalance">
+  <view class="income">
+    <view class="title">本月收入</view>
+    <view class="number" style="color:#E0966F;">-0.00元</view>
+  </view>
+  <view class="lineH"></view>
+  <view class="expend">
+    <view class="title">本月支出</view>
+    <view class="number">+0.00元</view>
+  </view>
+</view>
+<!---没有消费记录时---->
+<!-- <view class="no-billDetail">
+  没有更多记录
+</view> -->
+<!---有消费记录时---->
+<view class="billDetail">
+  <view class="billDetail-item">
+    <image src="../../images/header/1.jpg" class="billDetail-item-header"></image>
+    <view class="billDetail-item-detail">
+      <view class="from">转账-来自</view>
+      <view class="date">3月29日 09:50</view>
+    </view>
+    <view class="billDetail-item-price" style="color:{{balanceType?'#FFA500':'#000'}};">+20.00</view>
+  </view>
+   <view class="billDetail-item">
+    <image src="../../images/header/1.jpg" class="billDetail-item-header"></image>
+    <view class="billDetail-item-detail">
+      <view class="from">转账-来自</view>
+      <view class="date">3月29日 09:50</view>
+    </view>
+    <view class="billDetail-item-price" style="color:#FFA500;">+20.00</view>
+  </view>
+   <view class="billDetail-item">
+    <image src="../../images/header/1.jpg" class="billDetail-item-header"></image>
+    <view class="billDetail-item-detail">
+      <view class="from">转账-来自</view>
+      <view class="date">3月29日 09:50</view>
+    </view>
+    <view class="billDetail-item-price" style="color:#FFA500;">+20.00</view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/my/my",
+    "pages/myAddress/myAddress",
+    "pages/myMessage/myMessage",
+    "pages/editAddress/editAddress",
+    "pages/aboutMe/aboutMe",
+    "pages/stuApprove/stuApprove",
+    "pages/balance/balance",
+    "pages/redPacket/redPacket",
+    "pages/ticket/ticket",
+    "pages/withDraw/withDraw",
+    "pages/addRoder/addRoder",
+    "pages/leaveUnused/leaveUnused",
+    "pages/detailOrder/detailOrder"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FFA500",
+    "navigationBarTitleText": "校园小蜜蜂",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#ccc"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "小蜜蜂",
+      "iconPath": "./images/icons/bee.png",
+      "selectedIconPath": "./images/icons/bee-active.png"
+    },{
+      "pagePath": "pages/order/order",
+      "text": "订单",
+      "iconPath": "./images/icons/order.png",
+      "selectedIconPath": "./images/icons/order-active.png"
+    },{
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "./images/icons/my.png",
+      "selectedIconPath": "./images/icons/my-active.png"
+    }],
+    "color": "black",
+    "selectedColor":"#FFA500"
+   
+  }
+}

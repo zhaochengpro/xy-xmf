@@ -1,0 +1,27 @@
+<van-cell-group>
+  <van-field
+    value="{{ balance }}"
+    clearable
+    label="余额"
+    disabled
+  />
+  <van-field
+    value="{{ balance }}"
+    clearable
+    label="可提金额"
+    disabled
+    icon="question-o"
+    icon-class="icon-question"
+    bind:click-icon="onClickIcon"
+  />
+  <van-field
+    value=""
+    type="number"
+    label="提现金额"
+    border="{{ false }}"
+    placeholder="0.00"
+  />
+  <van-cell>
+    <button class="btn-withDraw" disabled>提现</button>
+  </van-cell>
+</van-cell-group>
