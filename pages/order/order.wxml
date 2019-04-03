@@ -1,26 +1,72 @@
 <view class="tabTop">
-  <view bindtap="onClickSendOrder" class="{{isActive[0]?'active':'tabTop-item'}}">我发起的</view>
-  <view bindtap='onClickGetOrder' class="{{isActive[1]?'active':'tabTop-item'}}">我接到的</view>
+  <view catchtap="onClickSendOrder" class="{{isActive[0]?'active':'tabTop-item'}}">我发起的</view>
+  <view catchtap='onClickGetOrder' class="{{isActive[1]?'active':'tabTop-item'}}">我接到的</view>
 </view>
+<view class="placeholder"></view>
 <!---无订单样式--->
 <!-- <view class="orderArea-no">
   暂无订单
 </view> -->
-<!---有订单样式- -->
-<view class="orderArea">
-  <view class="orderArea-item">
+<!---有订单样式-我发起的 -->
+<view class="orderArea" wx:if="{{isActive[0]}}">
+  <view class="orderArea-item" wx:for="{{orders}}" wx:key="1" catchtap='onClickEdit' id="editOrder?index={{item.index}}">
     <view class="item-top">
-      <image src="../../images/header/1.jpg"></image>
-      <text>待接单</text>
+      <!-- <image src="../../images/header/1.jpg"></image> -->
+      <text class="name">【{{item.type}}】</text>
+      <text>{{item.status}}</text>
     </view>
     <view class="item-middle">
-        <text></text>
-        <text></text>
-        <text></text>
+        <!-- <text class="type">美食</text> -->
+        <text class="content">{{item.content}}</text>
+        <text class="price">￥{{item.price}}</text>
+        <view class="place">地点：<text>{{item.place}}</text></view>
+        <view class="endtime">失效日期：<text>{{item.endTime}}</text></view>
     </view>
     <view class="item-bottom">
-      <button>删除订单</button>
-      <button>编辑订单</button>
+      <view class="starttime"><text>{{item.startTime}}</text></view>
+      <button catchtap='onClickDetele'>删除订单</button>
+      <button catchtap='onClickFinish'>完成订单</button>
+    </view>
+    <!--闲置物品订单详情---->
+  </view>
+   <view class="orderArea-item" wx:for="{{unUsedOrders}}" wx:key="1" wx:if="{{unUsedOrders.length>0}}" bindtap='onClickEditUnused' id="editUnusedOrder?index={{item.index}}">
+    <view class="item-top">
+      <!-- <image src="../../images/header/1.jpg"></image> -->
+      <text class="name">【{{item.type}}】</text>
+      <text>{{item.status}}</text>
+    </view>
+    <view class="item-middle">
+        <!-- <text class="type">美食</text> -->
+        <text class="content">{{item.content}}</text>
+        <text class="price">￥{{item.price}}</text>
+        <view class="endtime">失效日期：<text>{{item.endTime}}</text></view>
+    </view>
+    <view class="item-bottom">
+      <view class="starttime"><text>{{item.startTime}}</text></view>
+      <button catchtap='onClickDetele'>删除闲置</button>
+      <button catchtap='onClickFinish'>完成闲置</button>
+    </view>
+    <!--闲置物品订单详情---->
+  </view>
+</view>
+<!---有订单样式-我接到的 -->
+<view class="orderArea" wx:if="{{isActive[1]}}">
+  <view class="orderArea-item" wx:for="{{orders}}" wx:key="1"  bindtap='onClickEdit' id="editOrder?index={{item.index}}">
+    <view class="item-top">
+      <image src="../../images/header/1.jpg"></image>
+      <text class="name">DC【{{item.type}}】</text>
+      <text>{{item.status}}</text>
+    </view>
+    <view class="item-middle">
+        <!-- <text class="type">美食</text> -->
+        <text class="content">{{item.content}}</text>
+        <text class="price">￥{{item.price}}</text>
+        <view class="place">地点：<text>{{item.place}}</text></view>
+        <view class="endtime">失效日期：<text>{{item.endTime}}</text></view>
+    </view>
+    <view class="item-bottom">
+      <view class="starttime"><text>{{item.startTime}}</text></view>
+      <button catchtap='onClickDetele'>放弃接单</button>
     </view>
   </view>
 </view>

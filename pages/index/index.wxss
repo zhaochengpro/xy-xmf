@@ -63,6 +63,34 @@ page{
   font-size: 25rpx;
   color:darkgray;
 }
+.tab{
+  width:95%;
+  height: 70rpx;
+  margin: 0 auto;
+  margin-top: 200rpx;
+  background: white;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 10rpx darkgray;
+}
+.tab-active{
+  color:#FFA500;
+  /* border-bottom: 2rpx solid #FFA500; */
+  /* overflow: hidden; */
+}
+.tab-active text{
+  padding: 10rpx 0rpx;
+  border-bottom: 5rpx solid #FFA500;
+  border-top: 5rpx solid #FFA500;
+}
+.tab-item{
+  display: inline-block;
+  width:50%;
+  height:100%;
+  text-align: center;
+  border-bottom-left-radius: 20rpx;
+}
 /**所有订单列表 css***/
 .allOrderList{
   position: relative;
@@ -70,7 +98,7 @@ page{
   width:95%;
   margin:0 auto;
   border-radius: 20rpx;
-  margin-top: 200rpx;
+  margin-top: 20rpx;
   box-shadow: 0rpx 0rpx 10rpx darkgray;
 }
 /**每个订单的样式***/

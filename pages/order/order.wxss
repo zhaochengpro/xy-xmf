@@ -14,6 +14,10 @@ page{
   text-align: center;
   box-shadow: 0rpx 0rpx 10rpx gray;
 }
+.placeholder{
+  width:100%;
+  height:80rpx;
+}
 .tabTop-item{
   display: inline-block;
   width:50%;
@@ -49,10 +53,10 @@ page{
 /***订单样式*****/
 .orderArea-item{
   width:95%;
-  height:400rpx;
+  height:450rpx;
   background: white;
   margin:0 auto;
-  margin-top: 100rpx;
+  margin-top: 30rpx;
   box-sizing: border-box;
   border-radius: 20rpx;
   overflow: hidden;
@@ -103,7 +107,7 @@ page{
 }
 .item-bottom button{
   display: inline-block;
-  width:30%;
+  width:25%;
   height:60%;
   background: white;
   border: 1rpx solid #FFA500;
@@ -112,4 +116,71 @@ page{
   /* vertical-align: middle; */
   margin-right: 10rpx;
   margin-top: 20rpx;
+}
+.name{
+  float: left;
+  color:black;
+  margin-top:10rpx;
+  font-weight: 800;
+  margin-left: 10rpx;
+}
+/**订单主要内容样式****/
+.type{
+  display: block;
+  width:100%;
+  height:40%;
+  box-sizing: border-box;
+  font-size: 40rpx;
+  font-family: "黑体";
+  padding-left: 20rpx;
+}
+.content{
+  width: 100%;
+  height:40%;
+  box-sizing: border-box;
+  display: block;
+  font-size: 35rpx;
+  padding: 0rpx 30rpx;
+}
+.starttime,.starttime text{
+  height:100%;
+  display: inline-block;
+  font-size: 20rpx;
+  color: gray;
+}
+.starttime{
+  width:30%;
+  float: left;
+  text-align: left;
+}
+.starttime text{
+  width:100%;
+  padding-left: 30rpx;
+  /* background: red; */
+  box-sizing: border-box;
+  padding-top: 30rpx;
+}
+.price{
+  width:100%;
+  height:25%;
+  display: inline-block;
+  text-align: right;
+  color:red;
+  box-sizing: border-box;
+  padding: 0rpx 30rpx;
+  font-size: 45rpx;
+  /* background: blue; */
+}
+.endtime,.place{
+  /* background: yellow; */
+  width:100%;
+  height:15%;
+  display: block;
+  box-sizing: border-box;
+  margin: 10rpx 30rpx;
+  font-size: 20rpx;
+  color: gray;
+}
+.endtime text,.place text{
+  font-size: 30rpx;
 }
