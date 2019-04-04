@@ -1,8 +1,9 @@
 <view classs="card">
   <view class="card-background"></view>
   <view class="card-foreground">
-    <view class="user-header" bindtap='showAboutMe'><image src="../../images/header/1.jpg"></image></view>
-    <view class="user-name">小蜜蜂</view>
+    
+    <view class="user-header" ><button bindgetuserinfo="getUserInfo"open-type="getUserInfo" style="display:{{isLogin?'none':'block'}}"> </button><image src="{{user.avatarUrl}}" style="display:{{isLogin?'block':'none'}}"></image></view>
+    <view class="user-name" >{{user.nickName}}</view>
     <view class="user-money">
       <view class="user-money-item balance" bindtap='showBalance'>
         <view class="user-money-number">0元</view>

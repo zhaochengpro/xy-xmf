@@ -39,7 +39,8 @@
         <!-- <text class="type">美食</text> -->
         <text class="content">{{item.content}}</text>
         <text class="price">￥{{item.price}}</text>
-        <view class="endtime">失效日期：<text>{{item.endTime}}</text></view>
+        <view class="endtime">入手价：<text>￥{{item.oldPrice}}</text></view>
+        <view class="endtime">入手时间：<text>{{item.oldDate}}</text></view>
     </view>
     <view class="item-bottom">
       <view class="starttime"><text>{{item.startTime}}</text></view>

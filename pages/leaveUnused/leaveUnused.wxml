@@ -34,7 +34,7 @@
 <van-cell-group>
   <van-field
     label="物品价格"
-    value="{{ unUsedOrder.price }}"
+    value="xxxx{{ unUsedOrder.price }}"
     placeholder="二手物品价格"
     readonly
     is-link

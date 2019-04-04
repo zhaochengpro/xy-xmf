@@ -13,21 +13,24 @@
         <van-cell-group>
             <van-field
               value="{{ username }}"
+              required
               clearable
               label="姓名"
               placeholder="请输入你的真实姓名"
               bind:click-icon="onClickIcon"
+              bindchange="onChange"
+              id="name"
             />
             <van-cell>
               <view slot="title">
                 <view class="van-cell-text">性别</view>
-                <radio-group class="radio-group" radiochange="radiochange">
+                <radio-group class="radio-group" bindchange="radiochange">
                   <label class="radio">
-                    <radio value="gender" checked="true" color="#FFA500"/>
+                    <radio value="男" checked="true" color="#FFA500"/>
                     男 
                   </label>
                   <label class="radio">
-                    <radio value="gender" checked="" color="#FFA500"/>
+                    <radio value="女" checked="" color="#FFA500"/>
                     女
                   </label>
               </radio-group>
@@ -39,17 +42,28 @@
               label="身份证号"
               placeholder="请输入你的身份证号码"
               border="{{ false }}"
+              required
+              id="idcard"
+              bindchange="onChange"
             />
           </van-cell-group>
       </view>
       <view class="blank"></view>
       <view class="picture">
-      <view class="pic-demo"><image src="../../images/pic/picDemo.jpg"></image></view>
-       <view class="takePic">
-         <view class="addIcon"><view class="line-h"></view><view class="line-v"></view></view>
+        <view class="pic-demo">
+        <image src="../../images/pic/picDemo.jpg"></image>
+        </view>
+        
+       <view class="takePic" catchtap='onClickAddPic' id="0" style="display:{{imgPaths[0]?'none':'inline-block'}}">
+          <view class="addIcon">
+            <view class="line-h"></view>
+            <view class="line-v"></view>
+          </view>
           <view class="addTitle">点击拍照</view>
         </view>
-      </view></view>
+        <image class="img" src="{{imgPaths[0]}}" style="display:{{imgPaths[0]?'inline-block':'none'}}"id="0" catchtap='showImage' catchlongtap='onClickAddPic'></image>
+      </view>
+      </view>
 <view style="display:{{rotutePage[1]}}">
   <view class="steps-info">
         <van-cell-group>
@@ -57,6 +71,10 @@
             clearable
             label="学号"
             placeholder="请输入"
+            required
+            type="number"
+            id="stuNumber"
+            bindchange="onChange"
           />
           <van-field
             value="成都航空职业技术学院"
@@ -64,17 +82,26 @@
             placeholder=""
             is-link
             disabled
+            required
+            id="school"
+            bindchange="onChange"
           />
            <van-field
             clearable
             label="院系"
             placeholder="请输入"
             bind:click-icon="onClickIcon"
+            required
+            id="department"
+            bindchange="onChange"
           />
            <van-field
             clearable
             label="专业"
             placeholder="请输入"
+            required
+            id="major"
+            bindchange="onChange"
           />
            <view class="section">
         <picker
@@ -90,6 +117,9 @@
             placeholder="{{intendTime}}"
             is-link
             disabled
+            required
+            id="enrollmentTime"
+            bindchange="onChange"
           />
         </picker>
       </view>
@@ -99,10 +129,12 @@
       <view class="blank"></view>
       <view class="picture">
       <view class="pic-demo"><image src="../../images/pic/stu.jpg"></image></view>
-       <view class="takePic">
+      
+       <view class="takePic" catchtap='onClickAddPic' id="1"style="display:{{imgPaths[1]?'none':'inline-block'}}">
          <view class="addIcon"><view class="line-h"></view><view class="line-v"></view></view>
           <view class="addTitle">点击拍照</view>
         </view>
+        <image src="{{imgPaths[1]}}" class="img"style="display:{{imgPaths[1]?'inline-block':'none'}}"id="1" catchtap='showImage' catchlongtap='onClickAddPic'></image>
         </view>
 </view>
 <view style="display:{{rotutePage[2]}};text-align:center;">
@@ -119,5 +151,5 @@
 </view>
 <view class="next">
   <button bindtap="onClickPrev" style="width:40%;display:{{prevDisplay?'inline-block':'none'}}">上一步</button>
-  <button bindtap='onClickNext' style="width:{{prevDisplay?'40%':'90%'}};display:{{active==3?'none':'inline-block'}};margin-left:{{prevDisplay?'20rpx':'0rpx'}};">下一步</button>
+  <button bindtap='onClickNext' id="{{active}}" style="width:{{prevDisplay?'40%':'90%'}};display:{{active==3?'none':'inline-block'}};margin-left:{{prevDisplay?'20rpx':'0rpx'}};">下一步</button>
 </view>

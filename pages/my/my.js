@@ -1,18 +1,34 @@
 // pages/my/my.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    isLogin:false,
+    user:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // let _this = this;
+    // wx.getStorage({
+    //   key: 'nickname',
+    //   success: function(res) {
+    //     _this.setData({
+    //       isLogin: true
+    //     })
+    //   },
+    //   fail:function(){
+    //     console.log('xxx')
+    //     _this.setData({
+    //       isLogin: false
+    //     })
+    //   }
+    // })
   },
 
   /**
@@ -98,6 +114,21 @@ Page({
   showGoldCoin:function(){
     wx.navigateTo({
       url: '../ticket/ticket',
+    })
+  },
+  getUserInfo:function(e){
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true,
+      isLogin:true,
+      user:e.detail.userInfo
+    })
+    console.log(this.data.isLogin);
+    wx.setStorage({
+      key: 'nickname',
+      data: JSON.parse(e.detail.rawData).nickName
     })
   }
 })

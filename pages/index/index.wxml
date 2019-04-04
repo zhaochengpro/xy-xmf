@@ -72,7 +72,7 @@
     </view>
     <view class="getOrder">
       <view class="order-price"><text class="title">蜜币：</text><text class="price">￥{{item.price}}</text></view>
-      <button class="btn-order" catchtap='onClickRobTicket'>{{item.orderStatus}}</button>
+      <button class="btn-order" catchtap='onClickUnusedItem' id="{{item.index}}">{{item.orderStatus}}</button>
     </view>
   </view>
 </view>
